@@ -46,11 +46,6 @@ namespace TextBasedAdventureGame
         {
             switch (toHere)
             {
-                case "Water":
-                case "water":
-                    waterStuff();
-                    break;
-
                 case "Look around":
                 case "look around":
                 case "Look Around":
@@ -70,6 +65,12 @@ namespace TextBasedAdventureGame
                     printInventory();
                     break;
 
+                case "Water":
+                case "water":
+                    Mill();
+                    break;
+
+
                 case "Field":
                 case "field":
                     FieldOfShit();
@@ -78,6 +79,11 @@ namespace TextBasedAdventureGame
                 case "River":
                 case "river":
                     River();
+                    break;
+
+                case "Forest":
+                case "forest":
+                    Forest();
                     break;
             }
         }
@@ -90,7 +96,7 @@ namespace TextBasedAdventureGame
             }
         }
 
-        private void waterStuff()
+        private void Mill()
         {
             Console.Beep();
             foreach(string inventoryItem in inventory)
@@ -185,14 +191,19 @@ namespace TextBasedAdventureGame
         }
         private void StartGame()
         {
-            Console.WriteLine("          Welcome to FAIL QUEST.\nThis text based adventure will test your failure awesomenessness.\n\nYou have just exited the town of Shmagma, ");
+            Console.Clear();
+            Console.WriteLine("          Welcome to FAIL QUEST.\nThis text based adventure will test your failure awesomenessness.\n\nYou have just exited the TOWN of Shmagma, ");
             Console.WriteLine("it is a hot summer day with a nice cool wind blowing east and everything is\nperfect.");
             Console.WriteLine("All of a sudden a shriek comes from the north east of your position.\n");
-            Console.WriteLine("Quickly you spin around and witness a massive DEMON carring a princess to the\ncastle behind the town you just left.");
+            Console.WriteLine("Quickly you spin around and witness a massive DEMON carring a princess to the\ncastle behind the TOWN you just left.");
             Console.WriteLine("You feel you must do what you can to save the princess from her fate,\nbut you must aquire itams to aid you on your quest.\n");
-            Console.WriteLine("you are facing a path that leads to a beautiful field of tall grass.\n");
-            Console.WriteLine("Behind you is the town of Shmagma from which you have just exited.\n");
-            Console.WriteLine("Where do you choose to go?\n");
+            Console.WriteLine("you are facing a path that leads to a beautiful FIELD of tall grass.\n");
+            Console.WriteLine("Behind you is the TOWN of Shmagma from which you have just exited.\n");
+            Console.WriteLine("What do you choose to do?\n");
+            Console.WriteLine("Go to the TOWN.");
+            Console.WriteLine("Go to the FIELD.");
+            Console.WriteLine("Look around.");
+            Console.WriteLine("Check Inventory.");
         }
 
         private void FieldOfShit()
@@ -201,11 +212,13 @@ namespace TextBasedAdventureGame
             Console.WriteLine("As you approach the field you notice a fairly recognizable smell");
             Console.WriteLine("You realize it is the smell of feces, but you are unable to ");
             Console.WriteLine("Identify the origins of what it came from.");
-            Console.WriteLine("To the east lies the RIVER,\nto the south, the MILL,\nand to the west is the FOREST.");
-            Console.WriteLine("\nWhere will you go?");
-            Console.WriteLine("The RIVER.");
-            Console.WriteLine("The MILL.");
-            Console.WriteLine("The FOREST.\n");
+            Console.WriteLine("To the east lies the RIVER,\nto the south, the MILL,\nand to the west is the FOREST.\n");
+            Console.WriteLine("What do you choose to do?\n");
+            Console.WriteLine("Go to the RIVER.");
+            Console.WriteLine("Go to the MILL.");
+            Console.WriteLine("Go to the FOREST.");
+            Console.WriteLine("Look around.");
+            Console.WriteLine("Check Inventory.");
         }
 
         private void River()
@@ -213,10 +226,99 @@ namespace TextBasedAdventureGame
             Console.Clear();
 
             Console.WriteLine("You approach the river with caution as the rapids could easily pull you");
-            Console.WriteLine(" in and make short work of you. A ROPE could be quite handy right now");
+            Console.WriteLine(" in and make short work of you. A ROPE could be quite handy right now...");
+            Console.WriteLine("What do you choose to do?\n");
+            Console.WriteLine("Go to the FIELD.");
+            Console.WriteLine("Go to the QUARRY.");
+            Console.WriteLine("Look around.");
+            Console.WriteLine("Check Inventory.");
 
             //Add an if statement that checks for rope, if rope is in inventory you may cross the river
         }
 
+        private void Quarry()
+        {
+
+        }
+
+        private void Forest()
+        {
+            Console.Clear();
+            Console.WriteLine("The FOREST is dark and crawling with danger. There is a small narrow ");
+            Console.WriteLine("path leading into the arbour of death. As you enter, you hear something ");
+            Console.WriteLine("scamper across the root riden ground ten feet in front of you, but you ");
+            Console.WriteLine("cannot see what is was as it is dark as shit. You continue your trek ");
+            Console.WriteLine("into the woods when you come across an opening. A small field of short ");
+            Console.WriteLine("grass and blue sky over head from the lack of trees.");
+            Console.WriteLine("What do you choose to do?\n");
+            Console.WriteLine("Go to the FIELD.");
+            Console.WriteLine("Look around.");
+            Console.WriteLine("Check Inventory.");
+        }
+
+        private void Basement()
+        {
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+        }
+
+        private void Town()
+        {
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+        }
+
+        private void Blacksmith()
+        {
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+        }
+
+        private void Tavern()
+        {
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+        }
+
+        private void Castle()
+        {
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+        }
+
     }
+}
+
+class Area
+{
+    //Forest
+    //Mill
+    //Field
+    //River
+    //Basement
+    //Town
+    //Blacksmith
+    //Tavern
+    //Quarry
+    //Castle
 }
